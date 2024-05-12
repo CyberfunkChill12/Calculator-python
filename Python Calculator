@@ -1,0 +1,38 @@
+# Calculator python
+
+print("Welcome to the calculator!")
+# welcomes the user
+mathi = input("What type of operation would you like to perform?"+
+" addition, subtraction, multiplication, or division? ")
+# ask which math operation they want to use
+def calc(mathi):
+# put all the code in a function so it can be called
+    while True:
+    # made a while loop so the user can keep calculation as many times as they want
+        if mathi == "addition": #Addition
+            a1 = int(input("Enter the first number "))
+            a2 = int(input("Enter the second number "))
+            print(a1 ,"+", a2 ,"=", a1 + a2) #Adds two user inputs
+        elif mathi == "subtraction": #Subtraction
+            s1 = int(input("Enter the first number"))
+            s2 = int(input("Enter the second number"))
+            print(s1 ,"-", s2 ,"=", s1 - s2) #Subtracts two user inputs
+        elif mathi == "multiplication": #Multiplication
+            m1 = int(input("Enter the first number"))
+            m2 = int(input("Enter the second number"))
+            print(m1 ,"*", m2 ,"=", m1 * m2) #Multiplies two user inputs
+        elif mathi == "division": #Division
+            d1 = int(input("Enter the first number"))
+            d2 = int(input("Enter the second number"))
+            print(d1 ,"/", d2 ,"=", d1 / d2) #Divides two user inputs
+        else:
+            print("Error, try inputing again") #If user puts something incorrect
+            calc(mathi)
+        again = input("Do you want to calculate again? Type Yes or No:") #asks if user wants to play again
+        if again == "Yes":
+            calc(mathi)
+        elif again == "No":
+            print("Thank you for using the calculator!")
+            break
+
+calc(mathi)# Function is called so it can run
